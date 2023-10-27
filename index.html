@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //   // task26
+    //   function task26(...arr) {
+    //     arr.forEach((x) => (x % 2 == 1 ? console.log(x) : null));
+    //     return arr;
+    //   }
+    //   console.log(task26(1, 2, 3, 4, 5));
+
+    //   //task27
+
+    //   function task27(...arr) {
+    //     arr.forEach((x) => (x % 2 == 0 ? console.log(x) : null));
+    //     return arr;
+    //   }
+    //   console.log(task27(1, 2, 3, 4, 5));
+
+    //   //task28
+    //   function task28(...arr) {
+    //     arr.forEach((x, i) => (i % 2 == 1 ? console.log(x) : null));
+    //     return arr;
+    //   }
+    //   console.log(task28(1, 2, 3, 4, 5));
+
+    //   //task29
+
+    //   function task29(...arr) {
+    //     arr.forEach((x, i) => (i % 2 == 0 ? console.log(x) : null));
+    //     return arr;
+    //   }
+    //   console.log(task29(1, 2, 3, 4, 5));
+
+    //   // task30
+    //   function task30(...arr) {
+    //     let max = 0;
+    //     arr.forEach((x) => (max < x ? (max = x) : null));
+    //     return max;
+    //   }
+    //   console.log(task30(1, 2, 6, 4, 5));
+
+    //   //task31
+    //   function task31(...arr) {
+    //     let min = arr[0];
+    //     arr.forEach((x) => (min > x ? (min = x) : null));
+    //     return min;
+    //   }
+    //   console.log(task31(1, 2, 6, 4, 5));
+
+    //   //task 32
+    //   function task32(...arr) {
+    //     let max =arr[0]
+    //   arr.forEach((x)=>x%2==0 &&   max <x?  max=x : (null))
+    //   console.log(max)
+    //   }
+    //   console.log(task32(1, 2, 3, 6, 5));
+
+    //   //task33
+    //   function task33(...arr) {
+    //     let min =arr[0]
+    //   arr.forEach((x)=>x%2==0 &&   min>x?  min=x : (null))
+    //   console.log(min)
+    //   }
+    //   console.log(task33(3, 2, 3, 6, 5));
+
+    //   //task34
+    //   function task34(...arr) {
+    //     let max =arr[0]
+    //   arr.forEach((x)=>x%2==1 &&   max <x?  max=x : (null))
+    //   console.log(max)
+    //   }
+    //   console.log(task34(1, 2, 3, 6, 5));
+
+
+    //     //task35
+    //     function task35(...arr) {
+    //     let min =arr[0]
+    //   arr.forEach((x)=>x%2==1 &&   min >x?  min=x : (null))
+    //   console.log(min)
+    //   }
+    //   console.log(task35(1, 2, 3, 6, 5));
+
+     //task36
+    //   function task36(...arr) {
+    //     let min = arr[1];
+    //     arr.forEach((x,i) => (min > x ? (console.log(x,i)) : null));
+        
+    //   }
+    //   task36(3,2, 6, 1, 5);
+
+
+        //task37
+    //     function task37(...arr) {
+    //     let max = [arr[0]]
+    //     let ind
+    //     arr.forEach((x,i) => (max < x ? max=[x,i] : null));
+    //     console.log(max);
+        
+    //   }
+    //   task37(3, 2, 6, 1, 5);
+
+      //task 38
+
+      function task38(...arr) {
+        let max = 0;
+        let count=1;
+        arr.forEach((x) =>{if(max < x){ max=x } 
+        else if(max===x){count++}});
+        return count;
+      }
+      console.log(task38(1, 2, 5, 5, 5));
+
+
+      //task 39
+
+      function task39(...arr) {
+        let min = arr[0];
+        let count =0;
+        arr.forEach((x) =>{if(min > x){ min=x } 
+        else if(min===x){count++}});
+        return count;
+      }
+      console.log(task39(2, 1, 5, 1, 1));
+
+      //task40
+        function task40(...arr) {
+            let max =0 
+            let maxindex=0
+            arr.forEach((x,i)=>{if(max < x){ max=x ; maxindex = i}
+            
+        })
+        firstElement=arr[0]
+        arr[0]=arr[maxindex]
+        arr[maxindex]=firstElement
+            return arr
+    }
+    console.log(task40(4, 1, 2, 11, 3));
+
+    //task 41
+    function task41(...arr) {
+            let min =arr[0]
+            let minindex=0
+            arr.forEach((x,i)=>{if(min >x){ min=x ; minindex = i}
+            
+        })
+        firstElement=arr[0]
+        arr[0]=arr[minindex]
+        arr[minindex]=firstElement
+            return arr
+    }
+    console.log(task41(4, 1, 2, 11, 3));
+
+    //task 42
+    function task42(...arr) {
+            let max =0 
+            let maxindex=0
+            let min =arr[0]
+            let minindex=0
+            arr.forEach((x,i)=>{if(max < x){ max=x ; maxindex = i}
+            else if(min>x){min=x;minindex=i}
+        })
+        maxel=arr[maxindex]
+        arr[maxindex]=arr[minindex]
+        arr[minindex]=maxel
+            return arr
+    }
+    console.log(task42(4, 1, 2, 11, 3));
+
+    //task 43
+
+    function task43(...arr) {
+            let max =0 
+            let maxindex=0
+            let min =arr[0]
+            let minindex=0
+            arr.forEach((x,i)=>{if(x%2==0 && max < x){ max=x ; maxindex = i}
+            else if(x%2==1 && min>x){min=x;minindex=i}
+        })
+        maxel=arr[maxindex]
+        arr[maxindex]=arr[minindex]
+        arr[minindex]=maxel
+            return arr
+    }
+    console.log(task43(4, 1, 2, 11, 3));
+
+
+      
+
+
+    </script>
+  </body>
+</html>
